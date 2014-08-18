@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.uci.ics.asterix.aql.editor/src-gen" editDirectory="/edu.uci.ics.asterix.aql.editor.edit/src"
+    editorDirectory="/edu.uci.ics.asterix.aql.editor.editor/src" modelPluginID="edu.uci.ics.asterix.aql.editor"
+    forceOverwrite="true" modelName="AQL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="edu.uci.ics.asterix.aql.editor.edit"
+    editorPluginID="edu.uci.ics.asterix.aql.editor.editor" runtimeVersion="2.10">
+  <genPackages prefix="Aqlmodel" basePackage="edu.uci.ics.asterixdb" disposableProviderFactory="true"
+      fileExtensions="aql" ecorePackage="AQL.ecore#/">
+    <genClasses ecoreClass="AQL.ecore#//Statements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Statements/decls"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Statement"/>
+    <genClasses ecoreClass="AQL.ecore#//DataverseDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DataverseDeclaration/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//CreateStatement/ifNotExists"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateTypeSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateTypeSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateTypeSpecification/typeExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateNodegroupSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateNodegroupSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateNodegroupSpecification/ncNames"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DatasetSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/typeName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/nodeGroupName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/hints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/compactionPolicy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DatasetSpecification/compactionPolicyProperties"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//RefreshExternalDatasetStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RefreshExternalDatasetStatement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//IndexSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//IndexSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//IndexSpecification/nameComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//IndexSpecification/cis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//IndexSpecification/indexType"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CompactionPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CompactionPolicy/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FilterField">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FilterField/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//IndexType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//IndexType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//IndexType/arity"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateDataverseSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateDataverseSpecification/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//CreateDataverseSpecification/format"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateFunctionSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFunctionSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFunctionSpecification/paramList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFunctionSpecification/functionBodyExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CreateFeedSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFeedSpecification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFeedSpecification/adaptorName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFeedSpecification/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CreateFeedSpecification/appliedFunction"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ParameterList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//ParameterList/varLit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ApplyFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ApplyFunction/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//GetPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//GetPolicy/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FunctionSignature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionSignature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//PrimaryKey">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//PrimaryKey/primaryKeyFields"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//DropStatement/ifExists"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//InsertStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//InsertStatement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//InsertStatement/query"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DeleteStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//DeleteStatement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DeleteStatement/nameComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DeleteStatement/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//UpdateStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//UpdateStatement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateStatement/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateStatement/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateStatement/ucs"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//UpdateClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/is"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/ds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/us"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/ifbranch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UpdateClause/elsebranch"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//SetStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//SetStatement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//SetStatement/pv"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//WriteStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//WriteStatement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//WriteStatement/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//WriteStatement/writerClass"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//LoadStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LoadStatement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LoadStatement/adapterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LoadStatement/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//LoadStatement/alreadySorted"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//AdapterName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//AdapterName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//CompactStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//CompactStatement/nameComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FeedStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FeedStatement/feedNameComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FeedStatement/datasetNameComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Configuration/keyValuePair"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//KeyValuePair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//KeyValuePair/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//KeyValuePair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Properties">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Properties/property"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//TypeExpr"/>
+    <genClasses ecoreClass="AQL.ecore#//RecordTypeDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//RecordTypeDef/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RecordTypeDef/rf"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//RecordField">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RecordField/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RecordField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//RecordField/nullable"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//TypeReference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//TypeReference/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//OrderedListTypeDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//OrderedListTypeDef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//UnorderedListTypeDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UnorderedListTypeDef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FunctionName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionName/first"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionName/second"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionName/third"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//TypeName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//TypeName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Identifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//Identifier/name"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//QualifiedName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//QualifiedName/first"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//QualifiedName/second"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DoubleQualifiedName">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DoubleQualifiedName/first"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DoubleQualifiedName/second"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DoubleQualifiedName/third"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FunctionDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionDeclaration/paramList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FunctionDeclaration/funcBody"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Query">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Query/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/fa"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/funcName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/argList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/arg1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/arg2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/nameArg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/condExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/thenExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/elseExpr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//Expression/var"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/inExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Expression/satisfiesExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Field">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Field/ident"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Index">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//Index/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ListConstructor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ListConstructor/exprList"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//OrderedListConstructor"/>
+    <genClasses ecoreClass="AQL.ecore#//UnorderedListConstructor"/>
+    <genClasses ecoreClass="AQL.ecore#//RecordConstructor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RecordConstructor/fbList"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FieldBinding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FieldBinding/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FieldBinding/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//Clause"/>
+    <genClasses ecoreClass="AQL.ecore#//ForClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//ForClause/varExp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//ForClause/varPos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ForClause/inExp"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//LetClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//LetClause/varExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LetClause/beExp"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//WhereClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//WhereClause/whereExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//OrderbyClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//OrderbyClause/orderbyList"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//GroupClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//GroupClause/var"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//GroupClause/expr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//GroupClause/decorVar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//GroupClause/decorExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//GroupClause/withVarList"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//LimitClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LimitClause/limitExpr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//LimitClause/offSetExpr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DistinctClause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DistinctClause/exprs"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ExternalDatasetSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ExternalDatasetSpecification/adapterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ExternalDatasetSpecification/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//InternalDatasetSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//InternalDatasetSpecification/primaryKeyFields"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//InternalDatasetSpecification/autogenerated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//InternalDatasetSpecification/filterField"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropDatasetStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropDatasetStatement/pairId"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropIndexStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropIndexStatement/tripleId"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropNodegroupStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropNodegroupStatement/id"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropTypeStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropTypeStatement/pairId"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropDataverseStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropDataverseStatement/id"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropFunctionStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropFunctionStatement/funcSig"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DropFeedStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//DropFeedStatement/pairId"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ConnectFeedStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ConnectFeedStatement/policy"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DisconnectFeedStatement"/>
+    <genClasses ecoreClass="AQL.ecore#//OperatorExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//OperatorExpr/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//OperatorExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//AndExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//AndExpr/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//AndExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//RelExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RelExpr/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//RelExpr/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//RelExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//AddExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//AddExpr/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//AddExpr/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//AddExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//MultExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//MultExpr/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//MultExpr/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//MultExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//UnionExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UnionExpr/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UnionExpr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//UnaryExpr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//UnaryExpr/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//UnaryExpr/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//ValueExpr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//ValueExpr/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//StringLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//IntegerLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//IntegerLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FloatLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//FloatLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//DoubleLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//DoubleLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//NullLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//NullLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AQL.ecore#//BooleanLiteral/lit"/>
+    </genClasses>
+    <genClasses ecoreClass="AQL.ecore#//FLWOGR">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FLWOGR/clauseList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AQL.ecore#//FLWOGR/returnExpr"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

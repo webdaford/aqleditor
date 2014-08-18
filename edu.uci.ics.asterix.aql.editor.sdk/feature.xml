@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="edu.uci.ics.asterix.aql.editor.sdk"
+	label="AQL SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="edu.uci.ics.asterix.aql.editor"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="edu.uci.ics.asterix.aql.editor.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>
