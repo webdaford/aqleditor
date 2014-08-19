@@ -102,4 +102,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<!-- 
+	<dependencies>
+	  <dependency>
+	    <groupId>org.eclipse.xtext</groupId>
+	    <artifactId>org.eclipse.xtext</artifactId>
+	    <version>${xtext-version}</version>
+	  </dependency>
+	</dependencies> -->
 </project>
