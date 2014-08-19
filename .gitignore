@@ -21,4 +21,4 @@ RemoteSystemsTempFiles
 plugin.xml_gen
 src-gen
 xtend-gen
-com.forddaniel.net.dsl.prose/model/
+edu.uci.ics.asterix.aql.editor/model/
