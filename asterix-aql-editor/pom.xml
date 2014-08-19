@@ -33,7 +33,7 @@
 		<module>../edu.uci.ics.asterix.aql.editor.tests</module>
 		<module>../edu.uci.ics.asterix.aql.editor.ui</module>
 		<module>../edu.uci.ics.asterix.aql.editor.target</module>
-		<!-- <module>../edu.uci.ics.asterix.aql.editor.repository</module> -->
+		<module>../edu.uci.ics.asterix.aql.editor.repository</module> 
 	</modules>
 
 	<repositories>
