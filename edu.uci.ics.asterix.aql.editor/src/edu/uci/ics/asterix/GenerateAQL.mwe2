@@ -63,6 +63,9 @@ Workflow {
     	language = auto-inject {
     		uri = grammarURI
     
+            // Make sure we use the resourceSet created during during standalone setup
+            forcedResourceSet = theResourceSet
+            
     		// Java API to access grammar elements (required by several other fragments)
     		fragment = grammarAccess.GrammarAccessFragment auto-inject {}
     

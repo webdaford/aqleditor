@@ -27,11 +27,11 @@
 				<configuration>
 					<includePluginDependencies>true</includePluginDependencies>
 					<includeProjectDependencies>true</includeProjectDependencies>
-					<mainClass>org.eclipse.emf.mw2e.launch.runtime.Mwe2Launcher</mainClass>
+					<mainClass>org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher</mainClass>
 					<cleanupDaemonThreads>false</cleanupDaemonThreads>
 					<arguments>
 						<!-- Paths should be absolute. Use file:// -->
-						<argument>file://${project.basedir}/src/edu.uci.ics.asterix.GenerateAQL.mwe2</argument>
+						<argument>file://${project.basedir}/src/edu/uci/ics/asterix/GenerateAQL.mwe2</argument>
 						<argument>-p</argument>
 						<!-- Leading slash for Windows platforms -->
 						<argument>runtimeProject=/${project.basedir}</argument>
@@ -43,8 +43,11 @@
 						<artifactId>org.eclipse.xtext.xtext</artifactId>
 						<version>${xtext-version}</version>
 					</dependency>
-					<!-- <dependency> <groupId>org.eclipse.xtext</groupId> <artifactId>org.eclipse.xtext.xbase</artifactId> 
-						<version>${xtext-version}</version> </dependency> -->
+					<dependency>
+						<groupId>org.eclipse.xtext</groupId>
+						<artifactId>org.eclipse.xtext.xbase</artifactId>
+						<version>${xtext-version}</version>
+					</dependency>
 				</dependencies>
 			</plugin>
 
