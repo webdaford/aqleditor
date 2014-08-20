@@ -33,7 +33,7 @@
 		<module>../edu.uci.ics.asterix.aql.editor.tests</module>
 		<module>../edu.uci.ics.asterix.aql.editor.ui</module>
 		<module>../edu.uci.ics.asterix.aql.editor.target</module>
-		<module>../edu.uci.ics.asterix.aql.editor.repository</module> 
+		<module>../edu.uci.ics.asterix.aql.editor.repository</module>
 	</modules>
 
 	<repositories>
@@ -89,11 +89,31 @@
 							<arch>x86_64</arch>
 						</environment>
 
-						<!-- <environment> <os>linux</os> <ws>gtk</ws> <arch>x86</arch> </environment> 
-							<environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> </environment> 
-							<environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> </environment> 
-							<environment> <os>win32</os> <ws>win32</ws> <arch>x86_64</arch> </environment> 
-							<environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> </environment> -->
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<!-- <environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch> 
+						</environment> 
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch> 
+						</environment>  -->
 					</environments>
 				</configuration>
 			</plugin>
@@ -164,7 +184,7 @@
 						<outputDirectory>${project.basedir}/xtend-gen</outputDirectory>
 					</configuration>
 				</plugin>
-				
+
 			</plugins>
 		</pluginManagement>
 	</build>
