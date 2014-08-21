@@ -52,7 +52,7 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupdId>edu.uci.ics.asterix</groupdId>
+							<groupId>edu.uci.ics.asterix</groupId>
 							<artifactId>edu.uci.ics.asterix.aql.editor.target</artifactId>
 							<version>1.0.0-SNAPSHOT</version>
 						</artifact>
