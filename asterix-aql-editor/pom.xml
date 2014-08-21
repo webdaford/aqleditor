@@ -36,32 +36,7 @@
 		<module>../edu.uci.ics.asterix.aql.editor.repository</module>
 	</modules>
 
-	<repositories>
-		<repository>
-			<id>org.apache.maven.repo</id>
-			<name>Maven repository 2</name>
-			<url>http://repo.maven.apache.org/maven2</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-
-		<!-- Eclipse Repositories -->
-		<!-- Eclipse Platform -->
-		<repository>
-			<id>eclipse-platform</id>
-			<layout>p2</layout>
-			<url>${eclipse-site}</url>
-		</repository>
-
-		<!-- Eclipse Tycho/Maven Plugin -->
-		<repository>
-			<id>eclipse-indigo</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/indigo</url>
-		</repository>
-	</repositories>
-
+	
 	<build>
 		<plugins>
 			<!-- Eclipse Tycho/Maven Plugins -->
