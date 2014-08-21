@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/edu.uci.ics.asterix.aql.editor.sdk_1.0.0.qualifier.jar" id="edu.uci.ics.asterix.aql.editor.sdk" version="1.0.0.qualifier">
+   <bundle id="edu.uci.ics.asterix.aql.editor" version="1.0.0.qualifier">
       <category name="AQLEditor"/>
-   </feature>
+   </bundle>
+   <bundle id="edu.uci.ics.asterix.aql.editor.ui" version="1.0.0.qualifier">
+      <category name="AQLEditor"/>
+   </bundle>
    <category-def name="AQLEditor" label="AQL Editor">
       <description>
          Specialized editor for the AxterixDB Query Language AQL.
