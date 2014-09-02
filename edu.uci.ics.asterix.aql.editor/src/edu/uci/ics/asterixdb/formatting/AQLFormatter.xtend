@@ -5,8 +5,8 @@ package edu.uci.ics.asterixdb.formatting
 
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter
 import org.eclipse.xtext.formatting.impl.FormattingConfig
-// import com.google.inject.Inject;
-// import edu.uci.ics.asterixdb.services.AQLGrammarAccess
+import com.google.inject.Inject;
+import edu.uci.ics.asterixdb.services.AQLGrammarAccess
 
 /**
  * This class contains custom formatting description.
@@ -18,13 +18,72 @@ import org.eclipse.xtext.formatting.impl.FormattingConfig
  */
 class AQLFormatter extends AbstractDeclarativeFormatter {
 
-//	@Inject extension AQLGrammarAccess
-	
+	@Inject extension AQLGrammarAccess g
+
 	override protected void configureFormatting(FormattingConfig c) {
-// It's usually a good idea to activate the following three statements.
-// They will add and preserve newlines around comments
-//		c.setLinewrap(0, 1, 2).before(SL_COMMENTRule)
-//		c.setLinewrap(0, 1, 2).before(ML_COMMENTRule)
-//		c.setLinewrap(0, 1, 1).after(ML_COMMENTRule)
-	}
-}
+
+		// Preserve newlines around comments
+		c.setLinewrap(0, 1, 2).before(SL_COMMENTRule)
+		c.setLinewrap(0, 1, 2).before(ML_COMMENTRule)
+		c.setLinewrap(0, 1, 1).after(ML_COMMENTRule)
+
+		// Statements
+		//----------------------------------------------------
+		val ss = g.statementsAccess
+
+		// remove possible space before ";"
+		c.setNoSpace().before(ss.semicolonKeyword_1)
+
+		// Two newlines after ";"
+		c.setLinewrap(2).after(ss.getSemicolonKeyword_1())
+
+		// FunctionSpecification
+		//----------------------------------------------------
+		val fs = g.functionSpecificationAccess
+
+		// Newline after "{"
+		c.setLinewrap().after(fs.leftCurlyBracketKeyword_5)
+
+		// Indent functionBodyExpr
+		c.setIndentation(fs.leftCurlyBracketKeyword_5, fs.rightCurlyBracketKeyword_7)
+		// Newline before "}"
+		c.setLinewrap().before(fs.rightCurlyBracketKeyword_7)
+
+		// RecordTypeDef
+		//----------------------------------------------------
+		val rtda = g.recordTypeDefAccess
+
+		// Newline after "{"
+		c.setLinewrap().after(rtda.getLeftCurlyBracketKeyword_2)
+
+		// Indent RecordTypes
+		c.setIndentation(rtda.leftCurlyBracketKeyword_2, rtda.rightCurlyBracketKeyword_4)
+
+		// remove possible space before ","
+		c.setNoSpace().before(rtda.commaKeyword_3_1_0)
+
+		// Newline after ","
+		c.setLinewrap().after(rtda.getCommaKeyword_3_1_0())
+
+		// Newline before "}"
+		c.setLinewrap().before(rtda.getRightCurlyBracketKeyword_4)
+
+		// RecordField
+		//----------------------------------------------------
+		val rf = g.recordFieldAccess
+
+		// remove possible space before "?"
+		c.setNoSpace().before(rf.nullableQuestionMarkKeyword_3_0)
+
+		// UnorderedListTypeDef
+		//----------------------------------------------------
+		val uoltd = g.unorderedListTypeDefAccess
+
+		// Space after "{{"
+		c.setSpace(" ").after(uoltd.getLeftCurlyBracketLeftCurlyBracketKeyword_0)
+
+		// Space after "}}"
+		c.setSpace(" ").before(uoltd.getRightCurlyBracketRightCurlyBracketKeyword_2)
+
+	} // configureFormatting
+} // AQLFormatter
