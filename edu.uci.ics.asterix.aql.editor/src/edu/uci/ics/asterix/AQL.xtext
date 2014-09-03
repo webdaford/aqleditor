@@ -123,7 +123,7 @@ FunctionSignature:
     name=FunctionName "@" INTEGER_LITERAL;
 
 PrimaryKey:
-    "primary key" primaryKeyFields+=Identifier
+    "primary" "key" primaryKeyFields+=Identifier
     ("," primaryKeyFields+=Identifier)*;
 
     //	// Needs attention.  See original
@@ -141,7 +141,7 @@ IfExists:
     ("if" "exists")?;
 
 InsertStatement:
-    "insert into dataset" name=QualifiedName query=Query;
+    "insert" "into" "dataset" name=QualifiedName query=Query;
 
 DeleteStatement:
     "delete" name=Variable
@@ -167,7 +167,7 @@ SetStatement:
     "set" name=Identifier pv=STRING_LITERAL;
 
 WriteStatement:
-    "write output to" name=Identifier ":" fileName=STRING_LITERAL
+    "write" "output" "to" name=Identifier ":" fileName=STRING_LITERAL
     ("using" writerClass=STRING_LITERAL)?;
 
 LoadStatement:
@@ -387,13 +387,13 @@ WhereClause:
     "where" whereExpr=Expression;
 
 OrderbyClause:
-    ("order by" orderbyList+=Expression
+    ("order" "by" orderbyList+=Expression
     (("asc") | ("desc"))?
     ("," orderbyList+=Expression
     (("asc") | ("desc"))?)*);
 
 GroupClause:
-    "group by" (var+=Variable ":=")?
+    "group" "by" (var+=Variable ":=")?
     expr+=Expression
     ("," (var+=Variable ":=")? expr+=Expression)*
     ("decor" decorVar+=Variable ":=" decorExpr+=Expression
@@ -405,7 +405,7 @@ LimitClause:
     ("offset" offSetExpr=Expression)?;
 
 DistinctClause:
-    "distinct by" exprs+=Expression
+    "distinct" "by" exprs+=Expression
     ("," exprs+=Expression)*;
 
     // Refine see line 2170 in original
