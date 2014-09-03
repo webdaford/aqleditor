@@ -34,7 +34,6 @@ class CreateDatasetSpecificationTest {
         VALID_CREATE_DATASET_SPECIFICATION.parse.assertNoErrors
     }
 
-    @Ignore
     @Test
     def void givenValidCreateExternalDatasetSpecification_thenNoErrors() {
         VALID_CREATE_EXTERNAL_DATASET_SPECIFICATION.parse.assertNoErrors
