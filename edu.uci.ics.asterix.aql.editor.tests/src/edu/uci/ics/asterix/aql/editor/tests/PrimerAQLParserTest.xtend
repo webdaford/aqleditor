@@ -120,7 +120,6 @@ class PrimerAQLParserTest {
         
     '''
 
-    //@Ignore
     @Test
     def void givenAQLFromPrimer_thenNoErrors() {
         PRIMER_AQL.parse.assertNoErrors
