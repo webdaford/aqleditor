@@ -36,7 +36,7 @@
 		<module>../edu.uci.ics.asterix.aql.editor.repository</module>
 	</modules>
 
-	
+
 	<build>
 		<plugins>
 			<!-- Eclipse Tycho/Maven Plugins -->
@@ -49,22 +49,6 @@
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<configuration>
-					<target>
-						<artifact>
-							<groupId>edu.uci.ics.asterix</groupId>
-							<artifactId>edu.uci.ics.asterix.aql.editor.target</artifactId>
-							<version>1.0.0-SNAPSHOT</version>
-						</artifact>
-					</target>
-					<environments>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-					</environments>
-				</configuration>
 			</plugin>
 		</plugins>
 
@@ -108,6 +92,22 @@
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>target-platform-configuration</artifactId>
 					<version>${tycho-version}</version>
+					<configuration>
+						<target>
+							<artifact>
+								<groupId>edu.uci.ics.asterix</groupId>
+								<artifactId>edu.uci.ics.asterix.aql.editor.target</artifactId>
+								<version>1.0.0-SNAPSHOT</version>
+							</artifact>
+						</target>
+						<environments>
+							<environment>
+								<os>linux</os>
+								<ws>gtk</ws>
+								<arch>x86_64</arch>
+							</environment>
+						</environments>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>
