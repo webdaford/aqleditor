@@ -179,13 +179,13 @@ AdapterName:
     name=Identifier;
 
 CompactStatement:
-    "compact dataset" nameComponents=QualifiedName;
+    "compact" "dataset" nameComponents=QualifiedName;
 
 FeedStatement:
-    ("connect feed" {ConnectFeedStatement} feedNameComponents=QualifiedName "to dataset"
+    ("connect" "feed" {ConnectFeedStatement} feedNameComponents=QualifiedName "to" "dataset"
     datasetNameComponents=QualifiedName
     (policy=GetPolicy)?
-    | "disconnect feed" {DisconnectFeedStatement} feedNameComponents=QualifiedName "from" "dataset"
+    | "disconnect" "feed" {DisconnectFeedStatement} feedNameComponents=QualifiedName "from" "dataset"
     datasetNameComponents=QualifiedName);
 
 Configuration:
