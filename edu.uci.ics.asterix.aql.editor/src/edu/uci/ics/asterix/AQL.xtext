@@ -145,7 +145,7 @@ InsertStatement:
 
 DeleteStatement:
     "delete" name=Variable
-    "from dataset" nameComponents=QualifiedName
+    "from" "dataset" nameComponents=QualifiedName
     ("where" condition=Expression)?;
 
 UpdateStatement:
@@ -185,7 +185,7 @@ FeedStatement:
     ("connect feed" {ConnectFeedStatement} feedNameComponents=QualifiedName "to dataset"
     datasetNameComponents=QualifiedName
     (policy=GetPolicy)?
-    | "disconnect feed" {DisconnectFeedStatement} feedNameComponents=QualifiedName "from dataset"
+    | "disconnect feed" {DisconnectFeedStatement} feedNameComponents=QualifiedName "from" "dataset"
     datasetNameComponents=QualifiedName);
 
 Configuration:
