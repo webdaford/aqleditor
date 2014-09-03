@@ -12,20 +12,19 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 import static edu.uci.ics.asterix.aql.editor.tests.TestConstants.*
-import org.junit.Ignore
 
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(AQLInjectorProvider))
 class LoadStatementTest {
-    @Inject extension ParseHelper<Statements>;
-    @Inject extension ValidationTestHelper
+	@Inject extension ParseHelper<Statements>;
+	@Inject extension ValidationTestHelper
 
-    val VALID_LOAD_STATEMENT = '''
-     load dataset «DATASET_NAME» using «ADAPTER_NAME» «CONFIGURATION»;
-    '''
-    @Ignore
-    @Test
-    def void givenValidLoadStatement_thenNoErrors() {
-        VALID_LOAD_STATEMENT.parse.assertNoErrors
-    }
+	val VALID_LOAD_STATEMENT = '''
+		load dataset «DATASET_NAME» using «ADAPTER_NAME» «CONFIGURATION»;
+	'''
+
+	@Test
+	def void givenValidLoadStatement_thenNoErrors() {
+		VALID_LOAD_STATEMENT.parse.assertNoErrors
+	}
 } // LoadStatementTest
