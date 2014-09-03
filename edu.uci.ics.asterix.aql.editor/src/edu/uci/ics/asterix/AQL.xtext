@@ -110,7 +110,7 @@ ParameterList:
     "(" {ParameterList} (varLit+=VARIABLE_LITERAL ("," varLit+=VARIABLE_LITERAL)*)? ")";
 
 IfNotExists:
-    ("if not exists")?;
+    ("if" "not" "exists")?;
 
     // Review original line 593
 ApplyFunction:
@@ -138,7 +138,7 @@ DropStatement:
     | "feed" {DropFeedStatement} pairId=QualifiedName ifExists?=IfExists);
 
 IfExists:
-    ("if exists")?;
+    ("if" "exists")?;
 
 InsertStatement:
     "insert into dataset" name=QualifiedName query=Query;
@@ -159,7 +159,7 @@ UpdateClause:
     | is=InsertStatement
     | ds=DeleteStatement
     | us=UpdateStatement
-    | "if (" condition=Expression ")"
+    | "if" "(" condition=Expression ")"
     "then" ifbranch=UpdateClause
     -> "else" elsebranch=UpdateClause;
 
@@ -171,7 +171,7 @@ WriteStatement:
     ("using" writerClass=STRING_LITERAL)?;
 
 LoadStatement:
-    "load dataset" name=QualifiedName
+    "load" "dataset" name=QualifiedName
     "using" adapterName=AdapterName properties=Configuration
     (alreadySorted?="pre-sorted")?;
 
@@ -250,7 +250,7 @@ DoubleQualifiedName:
     first=Identifier "." second=Identifier ("." third=Identifier)?;
 
 FunctionDeclaration:
-    "declare function" name=Identifier
+    "declare" "function" name=Identifier
     paramList=ParameterList
     "{" funcBody=Expression "}";
 
@@ -361,7 +361,7 @@ ParenthesizedExpression returns Expression:
     "(" Expression ")";
 
 IfThenElse returns Expression:
-    "if (" condExpr=Expression ") then" thenExpr=Expression "else" elseExpr=Expression;
+    "if" "(" condExpr=Expression ")" "then" thenExpr=Expression "else" elseExpr=Expression;
 
 FLWOGR returns Expression:
     {FLWOGR}
