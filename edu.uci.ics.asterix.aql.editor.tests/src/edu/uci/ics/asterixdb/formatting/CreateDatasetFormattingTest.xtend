@@ -17,7 +17,8 @@ class CreateDatasetFormattingTest extends AbstractAQLEditorFormattingTest {
 		cid on group1;
 	'''
 
-	val VALID_CREATE_DATASET_FORMATTED0 = '''create dataset Customers ( CustomerType )  primary key cid on group1;'''
+	val VALID_CREATE_DATASET_FORMATTED0 = '''create dataset Customers ( CustomerType )
+ primary key cid on group1;'''
 
 	@Test
 	def void givenUnformattedLoadDataset0_thenCorrectFormatting() {

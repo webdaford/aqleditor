@@ -37,6 +37,13 @@ class AQLFormatter extends AbstractDeclarativeFormatter {
 		// Two newlines after ";"
 		c.setLinewrap(2).after(ss.getSemicolonKeyword_1())
 
+		// Create Dataset
+		//----------------------------------------------------
+		val cd = g.datasetSpecificationAccess
+		
+		// Newline after ")"
+		c.setLinewrap().after(cd.rightParenthesisKeyword_1_6)
+
 		// FunctionSpecification
 		//----------------------------------------------------
 		val fs = g.functionSpecificationAccess
