@@ -161,7 +161,7 @@ UpdateClause:
     | us=UpdateStatement
     | "if" "(" condition=Expression ")"
     "then" ifbranch=UpdateClause
-    -> "else" elsebranch=UpdateClause;
+    "else" elsebranch=UpdateClause;
 
 SetStatement:
     "set" name=Identifier pv=STRING_LITERAL;
@@ -272,10 +272,10 @@ AndExpr returns Expression:
 
 RelExpr returns Expression:
     AddExpr
-    -> ({RelExpr.left=current} op=("<" | ">" | "<=" | ">=" | "=" | "!=" | "~=") right=AddExpr)?;
+    ({RelExpr.left=current} op=("<" | ">" | "<=" | ">=" | "=" | "!=" | "~=") right=AddExpr)?;
 
 AddExpr returns Expression:
-    MultExpr ({AddExpr.left=current} -> op=("+" | "-") right=MultExpr)*;
+    MultExpr ({AddExpr.left=current} op=("+" | "-") right=MultExpr)*;
 
 MultExpr returns Expression:
     UnionExpr ({MultExpr.left=current} op=("*" | "/" | "%" | "^" | "idiv") right=UnionExpr)*;
@@ -287,7 +287,7 @@ UnionExpr returns Expression:
 //UnaryExpr returns Expression:
 //	(-> ("+" | "-"))? expr=ValueExpr;
 UnaryExpr returns Expression:
-    ValueExpr | {UnaryExpr} -> op=("+" | "-") expr=UnaryExpr;
+    ValueExpr | {UnaryExpr} op=("+" | "-") expr=UnaryExpr;
 
     // Original
 //ValueExpr returns Expression:
