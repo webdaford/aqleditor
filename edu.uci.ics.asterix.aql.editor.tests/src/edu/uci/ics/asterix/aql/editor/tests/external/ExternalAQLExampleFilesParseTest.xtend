@@ -30,7 +30,7 @@ class ExternalAQLExampleFilesParseTest {
 	val FILE_ROOT = "src/test/resources"
 
 	val FOLDERS_TO_SKIP = new HashSet<String>(Arrays.asList("runtimets", "metadata"))
-	val SUFFIXES_TO_SKIP = new HashSet<String>(Arrays.asList("xml", "properties", "ps", "txt"))
+	val SUFFIXES_TO_SKIP = new HashSet<String>(Arrays.asList("xml", "properties", "ps", "txt", "plan"))
 
 	var Set<String> successFullyParsedFiles = new HashSet<String>();
 
@@ -61,7 +61,7 @@ class ExternalAQLExampleFilesParseTest {
 			fileCount++
 			try {
 				parseFile(path)
-				successFullyParsedFiles.add(removePrefix(path.toString,FILE_ROOT))
+				successFullyParsedFiles.add(removePrefix(path.toString, FILE_ROOT))
 			} catch (AssertionError ae) {
 
 				// Parse error
@@ -76,14 +76,13 @@ class ExternalAQLExampleFilesParseTest {
 		}
 
 	}
-	
-	def removePrefix(String string, String prefix) {
-		 val i = string.lastIndexOf(prefix)+prefix.length
-		 return string.substring(i)
-	}
-	
-	// parseFilesInFolder
 
+	def removePrefix(String string, String prefix) {
+		val i = string.lastIndexOf(prefix) + prefix.length
+		return string.substring(i)
+	}
+
+	// parseFilesInFolder
 	def getExtension(Path path) {
 		val fileName = path.fileName.toString
 		val i = fileName.lastIndexOf(".")
