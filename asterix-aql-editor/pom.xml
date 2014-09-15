@@ -34,6 +34,8 @@
 	</modules>
 
 	<build>
+		<sourceDirectory>${project.basedir}/src</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src</testSourceDirectory>
 		<!-- The configuration of "resources" below suppresses any resource copying. 
 			It also suppresses the warnings in the build about folders ("src/main/resources") 
 			that don't exist. -->
@@ -53,6 +55,7 @@
 				</excludes>
 			</testResource>
 		</testResources>
+		
 		<plugins>
 			<!-- Eclipse Tycho/Maven Plugins -->
 			<plugin>
