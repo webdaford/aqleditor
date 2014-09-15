@@ -22,7 +22,7 @@
 		<tycho-version>0.21.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>
 	</properties>
-	
+
 	<modules>
 		<module>../edu.uci.ics.asterix.aql.editor</module>
 		<module>../edu.uci.ics.asterix.aql.editor.sdk</module>
@@ -33,8 +33,26 @@
 		<module>../edu.uci.ics.asterix.aql.editor.aqlexamples</module>
 	</modules>
 
-
 	<build>
+		<!-- The configuration of "resources" below suppresses any resource copying. 
+			It also suppresses the warnings in the build about folders ("src/main/resources") 
+			that don't exist. -->
+		<resources>
+			<resource>
+				<directory> ${project.basedir} </directory>
+				<excludes>
+					<exclude>**</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory> ${project.basedir} </directory>
+				<excludes>
+					<exclude>**</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
 		<plugins>
 			<!-- Eclipse Tycho/Maven Plugins -->
 			<plugin>
