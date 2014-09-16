@@ -19,10 +19,9 @@ using "edu.uci.ics.asterix.external.dataset.adapter.NCFileSystemAdapter"
 	'''
 
 	val VALID_LOAD_DATASET_FORMATTED0 = '''
-load dataset Customers using
-"edu.uci.ics.asterix.external.dataset.adapter.NCFileSystemAdapter" ( ( "path" =
-"nc1://data/custord-tiny/customer-tiny.adm" ) , ( "format" = "adm" ) )
-pre-sorted;'''
+
+load dataset Customers using "edu.uci.ics.asterix.external.dataset.adapter.NCFileSystemAdapter" (("path" =
+"nc1://data/custord-tiny/customer-tiny.adm"), ("format" = "adm")) pre-sorted;'''
 
 	@Test
 	def void givenUnformattedLoadDataset0_thenCorrectFormatting() {

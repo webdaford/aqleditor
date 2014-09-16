@@ -20,7 +20,10 @@ class FunctionDefinitionFormattingTest extends AbstractAQLEditorFormattingTest {
 	'''
 
 	// This doesn't seem right.  Shouldn't it be formatted across multiple lines?
-	val VALID_FUNCTION_DECLARATION_FORMATTED0 = '''declare function «FUNCTION_NAME» ( ) { 2 + 2 };'''
+	val VALID_FUNCTION_DECLARATION_FORMATTED0 = '''
+declare function «FUNCTION_NAME» () {
+2 + 2
+};'''
 
 	@Test
 	def void givenUnformattedFunctionDefinition_thenCorrectFormatting() {
