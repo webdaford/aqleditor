@@ -55,7 +55,7 @@
 				</excludes>
 			</testResource>
 		</testResources>
-		
+
 		<plugins>
 			<!-- Eclipse Tycho/Maven Plugins -->
 			<plugin>
@@ -143,12 +143,13 @@
 								<goal>compile</goal>
 								<goal>xtend-install-debug-info</goal>
 								<goal>testCompile</goal>
-								<goal>xtend-test-install-debug-info</goal>
+								<!-- <goal>xtend-test-install-debug-info</goal> -->
 							</goals>
 						</execution>
 					</executions>
 					<configuration>
 						<outputDirectory>${project.basedir}/xtend-gen</outputDirectory>
+						<testOutputDirectory>${project.basedir}/target/generated-sources/xtend</testOutputDirectory>
 					</configuration>
 				</plugin>
 
