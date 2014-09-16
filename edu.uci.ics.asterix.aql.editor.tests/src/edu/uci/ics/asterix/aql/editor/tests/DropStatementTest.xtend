@@ -42,10 +42,9 @@ class DropStatementTest {
     val VALID_DROP_TYPE_STATEMENT_IF_EXISTS = '''drop type «TYPE_NAME» if exists;
         '''
 
-    val VALID_DROP_DATAVERSE_STATEMENT = '''drop dataverse «DATAVERSE_NAME»;
-        '''
-    val VALID_DROP_DATAVERSE_STATEMENT_IF_EXISTS = '''drop dataverse «DATAVERSE_NAME» if exists;
-        '''
+//    val VALID_DROP_DATAVERSE_STATEMENT = '''drop dataverse «DATAVERSE_NAME»;
+//        '''
+//    val VALID_DROP_DATAVERSE_STATEMENT_IF_EXISTS = '''drop dataverse «DATAVERSE_NAME» if exists;'''
 
     val VALID_DROP_FUNCTION_STATEMENT = '''drop function «FUNCTION_NAME» @ 2;
         '''
