@@ -2,9 +2,7 @@
 <feature
       id="edu.uci.ics.asterix.aql.editor.sdk"
       label="AQL SDK Feature "
-      version="1.0.0.qualifier"
-      os="linux"
-      ws="gtk">
+      version="1.0.0.qualifier">
 
    <description>
       This is an editor for writing AsterixDB Query Language (AQL).

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: edu.uci.ics.asterix.aql.editor.ui
-Bundle-Vendor: My Company
+Bundle-Name: AQL Editor
+Bundle-Vendor: Dell Inc.
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: edu.uci.ics.asterix.aql.editor.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
