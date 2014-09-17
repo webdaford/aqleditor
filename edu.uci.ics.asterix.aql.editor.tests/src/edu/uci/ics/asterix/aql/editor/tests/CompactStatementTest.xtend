@@ -35,6 +35,6 @@ class CompactStatementTest {
         val stmts = VALID_COMPACT_STATEMENT.parse
 
         val cs = stmts.decls.get(0) as CompactStatement
-        Assert::assertEquals(DATASET_NAME, cs.nameComponents.first.name);
+        Assert::assertEquals(DATASET_NAME, cs.nameComponents.first.identifierName);
     }
 } // CompactStatementTest

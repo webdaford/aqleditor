@@ -24,9 +24,9 @@ class PrimerAQLParserTest {
 
 	// This is the primer AQL with ";"'s added
 	val PRIMER_AQL = '''
-		drop dataverse TinySocial if exists;
+		//drop dataverse TinySocial if exists;
 		create dataverse TinySocial;
-		use dataverse TinySocial;
+		//use dataverse TinySocial;
 		
 		create type TwitterUserType as open {
 		    screen-name: string,

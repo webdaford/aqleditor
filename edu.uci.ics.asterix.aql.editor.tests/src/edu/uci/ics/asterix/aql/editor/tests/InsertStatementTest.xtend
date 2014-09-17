@@ -18,23 +18,23 @@ import org.eclipse.xtext.junit4.validation.ValidationTestHelper
 @RunWith(typeof(XtextRunner))
 @InjectWith(typeof(AQLInjectorProvider))
 class InsertStatementTest {
-    @Inject extension ParseHelper<Statements>;
-    @Inject extension ValidationTestHelper
+	@Inject extension ParseHelper<Statements>;
+	@Inject extension ValidationTestHelper
 
-    val VALID_INSERT_STATEMENT = '''
-        insert into dataset «DATASET_NAME» 2;
-    '''
+	val VALID_INSERT_STATEMENT = '''
+		insert into dataset «DATASET_NAME» 2;
+	'''
 
-    @Test
-    def void givenValidInsertStatement_thenNoErrors() {
-        VALID_INSERT_STATEMENT.parse.assertNoErrors
-    }
+	@Test
+	def void givenValidInsertStatement_thenNoErrors() {
+		VALID_INSERT_STATEMENT.parse.assertNoErrors
+	}
 
-    @Test
-    def void givenValidInsertStatement_withQualifiedName_thenParsedNameIsCorrect() {
-        val stmts = VALID_INSERT_STATEMENT.parse
+	@Test
+	def void givenValidInsertStatement_withQualifiedName_thenParsedNameIsCorrect() {
+		val stmts = VALID_INSERT_STATEMENT.parse
 
-        val is = stmts.decls.get(0) as InsertStatement
-        Assert::assertEquals(DATASET_NAME, is.name.first.name);
-    }
+		val is = stmts.decls.get(0) as InsertStatement
+		Assert::assertEquals(DATASET_NAME, is.datasetName.first.identifierName);
+	}
 } // InsertStatementTest

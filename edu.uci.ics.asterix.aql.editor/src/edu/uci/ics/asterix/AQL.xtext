@@ -27,7 +27,7 @@ Statement:
     | RefreshExternalDatasetStatement;
 
 DataverseDeclaration:
-    "use" "dataverse" name=Identifier;
+    "use" "dataverse" dataverse=Identifier;
 
 CreateStatement returns CreateStatement:
     "create"
@@ -67,7 +67,7 @@ DatasetSpecification:
     ("with" "filter" "on" filterField=FilterField)?);
 
 RefreshExternalDatasetStatement:
-    "refresh" "external" "dataset" name=QualifiedName;
+    "refresh" "external" "dataset" datasetName=QualifiedName;
 
 IndexSpecification:
     "index" {IndexSpecification} name=Identifier
@@ -76,10 +76,10 @@ IndexSpecification:
     "(" (cis+=Identifier) ("," cis+=Identifier)* ")" ("type" indexType=IndexType)?;
 
 CompactionPolicy:
-    name=Identifier;
+    policy=Identifier;
 
 FilterField:
-    name=Identifier;
+    field=Identifier;
 
 IndexType:
     (type="btree"
@@ -114,13 +114,13 @@ IfNotExists:
 
     // Review original line 593
 ApplyFunction:
-    "apply" "function" name=FunctionName;
+    "apply" "function" functionName=FunctionName;
 
 GetPolicy:
-    "using" "policy" name=Identifier;
+    "using" "policy" policyName=Identifier;
 
 FunctionSignature:
-    name=FunctionName "@" INTEGER_LITERAL;
+    functionName=FunctionName "@" INTEGER_LITERAL;
 
 PrimaryKey:
     "primary" "key" primaryKeyFields+=Identifier
@@ -141,15 +141,15 @@ IfExists:
     ("if" "exists")?;
 
 InsertStatement:
-    "insert" "into" "dataset" name=QualifiedName query=Query;
+    "insert" "into" "dataset" datasetName=QualifiedName query=Query;
 
 DeleteStatement:
-    "delete" name=Variable
+    "delete" variableName=Variable
     "from" "dataset" nameComponents=QualifiedName
     ("where" condition=Expression)?;
 
 UpdateStatement:
-    "update" name=Variable "in" target=Expression
+    "update" variableName=Variable "in" target=Expression
     "where" condition=Expression
     "(" (ucs+=UpdateClause
     ("," ucs+=UpdateClause)*) ")";
@@ -164,19 +164,19 @@ UpdateClause:
     "else" elsebranch=UpdateClause;
 
 SetStatement:
-    "set" name=Identifier pv=STRING_LITERAL;
+    "set" variableName=Identifier pv=STRING_LITERAL;
 
 WriteStatement:
-    "write" "output" "to" name=Identifier ":" fileName=STRING_LITERAL
+    "write" "output" "to" outputName=Identifier ":" fileName=STRING_LITERAL
     ("using" writerClass=STRING_LITERAL)?;
 
 LoadStatement:
-    "load" "dataset" name=QualifiedName
+    "load" "dataset" inputName=QualifiedName
     "using" adapterName=AdapterName properties=Configuration
     (alreadySorted?="pre-sorted")?;
 
 AdapterName:
-    name=Identifier;
+    adapterName=Identifier;
 
 CompactStatement:
     "compact" "dataset" nameComponents=QualifiedName;
@@ -218,7 +218,7 @@ RecordField:
     ":" type=TypeExpr (nullable?="?")?;
 
 TypeReference:
-    name=Identifier;
+    type=Identifier;
 
 OrderedListTypeDef:
     "["
@@ -235,10 +235,10 @@ FunctionName:
     ("#" third=Identifier)? | "#" second=Identifier)?;
 
 TypeName:
-    name=QualifiedName;
+    typeName=QualifiedName;
 
 Identifier:
-    name=IDENTIFIER_LITERAL | name=STRING_LITERAL;
+    identifierName=IDENTIFIER_LITERAL | identifierName=STRING_LITERAL;
 
 QualifiedName:
     first=Identifier ("." second=Identifier)?;

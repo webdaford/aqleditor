@@ -34,7 +34,7 @@ class FunctionDeclarationTest {
         val stmts = VALID_FUNCTION_DECLARATION.parse
 
         val fd = stmts.decls.get(0) as FunctionDeclaration
-        Assert::assertEquals(FUNCTION_NAME, fd.name.name);
+        Assert::assertEquals(FUNCTION_NAME, fd.name.identifierName);
     }
 
 } // FunctionDeclarationTest

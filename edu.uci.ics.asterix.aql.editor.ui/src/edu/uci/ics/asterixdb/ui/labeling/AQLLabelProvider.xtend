@@ -46,11 +46,11 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     def text(DataverseDeclaration dd) {
-        'use dataverse: ' + dd.name.name
+        'use dataverse: ' + dd.dataverse.identifierName
     }
 
     def text(FunctionDeclaration fd) {
-        'function: ' + fd.name.name
+        'function: ' + fd.name.identifierName
     }
 
     def text(CreateDataverseSpecification cdvs) {
@@ -58,16 +58,16 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     def text(CreateTypeSpecification cts) {
-        'create: ' + getText(cts.name.name.first) + " as " + getText(cts.typeExpr)
+        'create: ' + getText(cts.name.typeName.first) + " as " + getText(cts.typeExpr)
     }
 
     def text(Identifier id) {
-        id.name
+        id.identifierName
     }
 
     // Incomplete	
     def text(LoadStatement ls) {
-        'load: ' + ls.name;
+        'load: ' + ls.inputName;
     }
 
     // Incomplete	
@@ -76,26 +76,26 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     def text(WriteStatement ws) {
-        'write: ' + ws.name.name
+        'write: ' + ws.outputName.identifierName
     }
 
     def text(SetStatement ss) {
-        'set: ' + ss.name.name + ' ' + ss.pv;
+        'set: ' + ss.variableName.identifierName + ' ' + ss.pv;
     }
 
     // Incomplete	
     def text(InsertStatement is) {
-        'insert: ' + is.name.first.name;
+        'insert: ' + is.datasetName.first.identifierName;
     }
 
     // Incomplete	
     def text(DeleteStatement ds) {
-        'delete: ' + ds.name
+        'delete: ' + ds.variableName
     }
 
     // Incomplete	
     def text(UpdateStatement us) {
-        'update: ' + us.name
+        'update: ' + us.variableName
     }
 
     // Incomplete	
@@ -104,7 +104,7 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     def text(CompactStatement cs) {
-        'compact: ' + cs.nameComponents.first.name
+        'compact: ' + cs.nameComponents.first.identifierName
     }
 
     // Incomplete	
@@ -113,7 +113,7 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     def text(RefreshExternalDatasetStatement reds) {
-        'refresh: ' + reds.name.first.name
+        'refresh: ' + reds.datasetName.first.identifierName
     }
 
     //---------------------------------------------------

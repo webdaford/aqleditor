@@ -33,7 +33,7 @@ class SetStatementTest {
     def void givenValidSetStatement_withIdentifierLiteralName_thenParsedNameIsCorrect() {
         val stmts = VALID_SET_STATEMENT1.parse
         val ss = stmts.decls.get(0) as SetStatement
-        Assert::assertEquals(KEY, ss.name.name);
+        Assert::assertEquals(KEY, ss.variableName.identifierName);
     }
 
     @Test

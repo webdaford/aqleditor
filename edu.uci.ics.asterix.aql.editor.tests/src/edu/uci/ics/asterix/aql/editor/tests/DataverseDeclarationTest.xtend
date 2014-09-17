@@ -38,7 +38,7 @@ class DataverseDeclarationTest {
         val stmts = VALID_DATAVERSE_DECLARATION_IDENTIFIER.parse
 
         val dvd = stmts.decls.get(0) as DataverseDeclaration
-        Assert::assertEquals(DATAVERSE_NAME, dvd.name.name);
+        Assert::assertEquals(DATAVERSE_NAME, dvd.dataverse.identifierName);
     }
 
     @Test
@@ -51,7 +51,7 @@ class DataverseDeclarationTest {
         val stmts = VALID_DATAVERSE_DECLARATION_STRING_LITERAL.parse
 
         val dvd = stmts.decls.get(0) as DataverseDeclaration
-        Assert::assertEquals(DATAVERSE_NAME_AS_STRING_LITERAL, dvd.name.name);
+        Assert::assertEquals(DATAVERSE_NAME_AS_STRING_LITERAL, dvd.dataverse.identifierName);
     }
 
 } // DataverseDeclarationTest
