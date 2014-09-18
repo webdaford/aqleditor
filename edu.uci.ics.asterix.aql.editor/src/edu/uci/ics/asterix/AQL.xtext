@@ -319,10 +319,10 @@ Literal returns Expression:
     | {BooleanLiteral} (lit="true" | lit="false");
 
 VariableRef returns Expression:
-    {Expression} VARIABLE_LITERAL;
+    {VariableRefExpression} variable=VARIABLE_LITERAL;
 
 Variable:
-    VARIABLE_LITERAL;
+    lit=VARIABLE_LITERAL;
 
 ListConstructor:
     (OrderedListConstructor
