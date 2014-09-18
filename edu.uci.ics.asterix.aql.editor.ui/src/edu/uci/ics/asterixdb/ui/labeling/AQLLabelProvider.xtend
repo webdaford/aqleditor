@@ -253,7 +253,11 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
 	//---------------------------------------------------
 	// RecordField
 	def text(RecordField rf) {
-		getText(rf.name)
+		var retValue = getText(rf.name)
+		if (rf.type instanceof TypeReference) {
+			retValue = retValue + ' : ' + getText(rf.type)
+		}
+		return retValue
 	}
 
 	//---------------------------------------------------

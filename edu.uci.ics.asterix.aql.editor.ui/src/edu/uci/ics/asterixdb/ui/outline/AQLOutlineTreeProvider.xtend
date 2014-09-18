@@ -75,7 +75,15 @@ class AQLOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	}
 
 	def protected _createChildren(IOutlineNode parentNode, RecordField rf) {
-		createNode(parentNode, rf.type);
+
+		// If the type is a type reference then no children
+		if (!(rf.type instanceof TypeReference)) {
+			createNode(parentNode, rf.type);
+		}
+	}
+
+	def protected _isLeaf(RecordField rf) {
+		rf.type instanceof TypeReference
 	}
 
 	def protected _createChildren(IOutlineNode parentNode, DeleteStatement dds) {
