@@ -53,8 +53,17 @@ class AQLOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	def protected _createChildren(IOutlineNode parentNode, CreateTypeSpecification cts) {
 
-		//createNode(parentNode, cts.name.typeName)
-		createNode(parentNode, cts.typeExpr)
+		if (cts.typeExpr instanceof RecordTypeDef) {
+
+			// If the child of the type is a RecordTypeDef, then skip the RecordTypeDef 
+			// instance as a child, and just use the RecordFields directly.  This produces
+			// a better Outline View
+			val RecordTypeDef rtd = cts.typeExpr as RecordTypeDef
+			for (RecordField recordField : rtd.rf)
+				createNode(parentNode, recordField)
+		} else {
+			createNode(parentNode, cts.typeExpr)
+		}
 	}
 
 	def protected _createChildren(IOutlineNode parentNode, CreateDataverseSpecification cdvs) {
@@ -76,9 +85,16 @@ class AQLOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	def protected _createChildren(IOutlineNode parentNode, RecordField rf) {
 
-		// If the type is a type reference then no children
-		if (!(rf.type instanceof TypeReference)) {
-			createNode(parentNode, rf.type);
+		if (rf.type instanceof RecordTypeDef) {
+
+			// If the child of the type is a RecordTypeDef, then skip the RecordTypeDef 
+			// instance as a child, and just use the RecordFields directly.  This produces
+			// a better Outline View
+			val RecordTypeDef rtd = rf.type as RecordTypeDef
+			for (RecordField recordField : rtd.rf)
+				createNode(parentNode, recordField)
+		} else if (!(rf.type instanceof TypeReference)) {
+			createNode(parentNode, rf.type)
 		}
 	}
 
