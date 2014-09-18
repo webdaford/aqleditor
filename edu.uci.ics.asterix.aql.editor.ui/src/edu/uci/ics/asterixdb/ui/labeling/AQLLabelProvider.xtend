@@ -79,7 +79,7 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
 	//---------------------------------------------------
 	// Statement
 	def text(DataverseDeclaration dd) {
-		'use dataverse: ' + getText(dd.dataverse)
+		'use dataverse ' + getText(dd.dataverse)
 	}
 
 	def text(FunctionDeclaration fd) {
@@ -155,13 +155,13 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
 	//---------------------------------------------------
 	// WriteStatement
 	def text(WriteStatement ws) {
-		'write: ' + getText(ws.outputName)
+		'write ' + getText(ws.outputName)
 	}
 
 	//---------------------------------------------------
 	// SetStatement
 	def text(SetStatement ss) {
-		'set: ' + getText(ss.variableName) + ' ' + ss.pv;
+		'set ' + getText(ss.variableName) + ' ' + ss.pv;
 	}
 
 	//---------------------------------------------------
@@ -196,14 +196,14 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
 	//---------------------------------------------------
 	// CompactStatement
 	def text(CompactStatement cs) {
-		'compact: ' + getText(cs.nameComponents)
+		'compact ' + getText(cs.nameComponents)
 	}
 
 	//---------------------------------------------------
 	// Query
 	// Incomplete	
 	def text(Query q) {
-		'query: ' + getText(q.expr)
+		'query ' + getText(q.expr)
 	}
 
 	//---------------------------------------------------
@@ -337,6 +337,7 @@ class AQLLabelProvider extends DefaultEObjectLabelProvider {
 	}
 
 	def text(VariableRefExpression i) {
+		val foo = getText(i.variable)
 		return getText(i.variable)
 	}
 
