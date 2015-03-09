@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.uci.ics.asterix.aql.editor.sdk"
+      label="AQL SDK Feature "
+      version="1.0.0.qualifier">
+
+   <description>
+      This is an editor for writing AsterixDB Query Language (AQL).
+   </description>
+
+   <copyright>
+      /*
+* Copyright 2014 by Dell Inc. and others.
+* Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+* you may not use this file except in compliance with the License.
+* you may obtain a copy of the License from
+* 
+*     http://www.apache.org/licenses/LICENSE-2.0
+* 
+* Unless required by applicable law or agreed to in writing,
+software
+* distributed under the License is distributed on an &quot;AS IS&quot;
+BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+or implied.
+* See the License for the specific language governing permissions
+and
+* limitations under the License.
+*/
+   </copyright>
+
+   <requires>
+      <import feature="org.eclipse.xtext.runtime" version="2.6.2.v201407030533"/>
+      <import feature="org.eclipse.xtext.ui" version="2.6.2.v201407030533"/>
+      <import feature="org.eclipse.xtext.xbase" version="2.6.2.v201407030533"/>
+      <import feature="org.eclipse.xtext.xbase.lib" version="2.6.2.v201407030533"/>
+      <import feature="org.eclipse.xtext.xtext.ui" version="2.6.2.v201407030533"/>
+   </requires>
+
+   <plugin
+         id="edu.uci.ics.asterix.aql.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.uci.ics.asterix.aql.editor.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

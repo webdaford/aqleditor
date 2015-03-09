@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  
+  <template id="AQL_CREATE_TYPE"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.Statement"
+      deleted="false"
+      description="Create type"
+      enabled="true"
+      name="Create Type">  
+    create type ${typeName} as ${cursor}
+  </template>
+  
+  <template id="AQL_CREATE_NODE_GROUP"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.Statement"
+      deleted="false"
+      description="Create node group"
+      enabled="true"
+      name="Create Node Group">  
+    create nodegroup ${nodeGroupName} on ${cursor}
+  </template>
+  
+  <!-- Create Dataset -->
+  <!-- ******************************************** -->
+  <template id="AQL_CREATE_EXTERNAL_DATASET"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.Statement"
+      deleted="false"
+      description="Create external dataset"
+      enabled="true"
+      name="Create External Dataset">  
+    create external dataset ${name} ( ${typename} )
+       using ${adapterName} ${cursor}
+  </template>  
+  
+  <template id="AQL_CREATE_INTERNAL_DATASET"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.Statement"
+      deleted="false"
+      description="Create external dataset"
+      enabled="true"
+      name="Create Internal Dataset">  
+    create internal dataset ${name} ( ${typename} )
+       using ${adapterName} ${cursor}
+  </template>  
+  
+ <template id="AQL_DATASET_USING"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.DatasetSpecification"
+      deleted="false"
+      description="using adapter"
+      enabled="true"
+      name="using"> using ${adapterName} ${cursor}
+ </template> 
+ 
+ <template id="AQL_DATASET_ON"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.DatasetSpecification"
+      deleted="false"
+      description="on node group"
+      enabled="true"
+      name="on node group"> on ${nodeGroupName} ${cursor}
+ </template>  
+  
+ <template id="AQL_DATASET_HINTS"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.DatasetSpecification"
+      deleted="false"
+      description="hints"
+      enabled="true"
+      name="hints"> hints ${cursor}
+ </template>  
+  
+  <template id="AQL_DATASET_COMPACTION"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.DatasetSpecification"
+      deleted="false"
+      description="using"
+      enabled="true"
+      name="using"> using compaction policy ${cursor}
+ </template>   
+  
+ <template id="AQL_DATASET_FILTER"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.DatasetSpecification"
+      deleted="false"
+      description="with filter"
+      enabled="true"
+      name="with"> with filter on ${cursor}
+ </template>   
+  
+ <!-- Record Type -->
+ <!-- ******************************************** -->
+ <template id="AQL_CLOSED_RECORD_TYPE_DEF"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.TypeExpr"
+      deleted="false"
+      description="Closed Record type."
+      enabled="true"
+      name="Closed Record Type"> closed {
+        ${cursor}
+      }
+  </template> 
+
+ <template id="AQL_OPEN_RECORD_TYPE_DEF"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.TypeExpr"
+      deleted="false"
+      description="Open Record type."
+      enabled="true"
+      name="Open Record Type"> open {
+        ${cursor}
+      }
+  </template> 
+
+  <template id="AQL_RECORD_TYPE_DEF"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.TypeExpr"
+      deleted="false"
+      description="Record type."
+      enabled="true"
+      name="Record Type"> {
+        ${cursor}
+      }
+ </template> 
+ 
+  <template id="AQL_RECORD_FIELD"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.RecordField"
+      deleted="false"
+      description="Record field."
+      enabled="true"
+      name="Record field"> ${fieldName} : ${cursor}
+  </template>
+  
+   <template id="AQL_ORDERED_LIST"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.OrderedListTypeDef"
+      deleted="false"
+      description="Create an ordered list."
+      enabled="true"
+      name="Ordered list.">[ ${cursor} ]${cursor}
+  </template>
+  
+  <template id="AQL_UNORDERED_LIST"
+      autoinsert="true"
+      context="edu.uci.ics.asterixdb.AQL.UnorderedListTypeDef"
+      deleted="false"
+      description="Create an unordered list."
+      enabled="true"
+      name="Unordered list.">{{ ${cursor} }}${cursor}
+  </template>
+  
+</templates>
